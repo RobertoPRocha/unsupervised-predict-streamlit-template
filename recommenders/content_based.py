@@ -19,7 +19,6 @@
     You must however change its contents (i.e. add your own content-based
     filtering algorithm), as well as altering/adding any other functions
     as part of your improvement.
-
     ---------------------------------------------------------------------
 
     Description: Provided within this file is a baseline content-based
@@ -40,6 +39,7 @@ ratings = pd.read_csv('resources/data/ratings.csv')
 movies.dropna(inplace=True)
 
 def data_preprocessing(subset_size):
+
     """Prepare data for use within Content filtering algorithm.
 
     Parameters
@@ -60,7 +60,7 @@ def data_preprocessing(subset_size):
     return movies_subset
 
 # !! DO NOT CHANGE THIS FUNCTION SIGNATURE !!
-# You are, however, encouraged to change its content.  
+# You are, however, encouraged to change its content.
 def content_model(movie_list,top_n=10):
     """Performs Content filtering based upon a list of movies supplied
        by the app user.
@@ -76,7 +76,7 @@ def content_model(movie_list,top_n=10):
     -------
     list (str)
         Titles of the top-n movie recommendations to the user.
-
+        
     """
     # Initializing the empty list of recommended movies
     recommended_movies = []
